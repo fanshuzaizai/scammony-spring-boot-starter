@@ -7,12 +7,7 @@
     <groupId>com.github.fanshuzaizai</groupId>
     <artifactId>scammony-spring-boot-starter</artifactId>
     <version>0.0.1</version>
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 7230f7c... 1.0.0版本
+    
     <properties>
         <spring-boot.version>2.0.5.RELEASE</spring-boot.version>
         <redisson.version>3.8.2</redisson.version>
