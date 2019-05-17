@@ -43,7 +43,7 @@ public class ScammonyProperties {
          * </code>}
          * </p>
          */
-        private String idKey;
+        private String idKey = "server.port";
 
         public String getId() {
             return id;
