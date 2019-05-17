@@ -138,7 +138,7 @@ public class AopConfig implements EnvironmentAware {
                 return pjp.proceed();
             } catch (Throwable throwable) {
                 log.error("出现异常", throwable);
-                return null;
+                throw throwable;
             }
         } else {
             return pjp.proceed();
