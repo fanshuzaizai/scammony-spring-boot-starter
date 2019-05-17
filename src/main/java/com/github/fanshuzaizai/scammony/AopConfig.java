@@ -156,8 +156,11 @@ public class AopConfig implements EnvironmentAware {
     }
 
     public boolean getGlobalSwitch() {
-        String groupKey = scammonyProperties.getGlobal().getIdKey();
-        String value = environment.getProperty(groupKey);
-        return environment.getProperty("scammony.global.setting." + value + ".run", Boolean.class, true);
+        String id = scammonyProperties.getGlobal().getId();
+        if (!StringUtils.hasText(id)) {
+            String idKey = scammonyProperties.getGlobal().getIdKey();
+            id = environment.getProperty(idKey);
+        }
+        return environment.getProperty("scammony.global.setting." + id + ".run", Boolean.class, true);
     }
 }
